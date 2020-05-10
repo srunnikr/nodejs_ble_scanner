@@ -6,6 +6,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var bleAdapter = require('./src/ble');
+
+var ble = new bleAdapter();
 var app = express();
 
 app.use(logger('dev'));
