@@ -1,3 +1,6 @@
+/*---------------------------------------
+ * Imports
+ *--------------------------------------*/
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -11,6 +14,9 @@ var bleAdapter = require('./src/ble');
 var ble = new bleAdapter();
 var app = express();
 
+/*---------------------------------------
+ * Middleware
+ *--------------------------------------*/
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
