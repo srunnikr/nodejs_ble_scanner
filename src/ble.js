@@ -10,6 +10,14 @@ class BleAdaptorNoble {
     this._nobleInstance.on('discover', this.discoveredPeripheral);
   }
 
+  set scanServiceUUIDs(UUIDList) {
+    this._scanServiceUUIDs = UUIDList;
+  }
+
+  get scanServiceUUIDs() {
+    return this._scanServiceUUIDs;
+  }
+
   set scanResultCallback(callback) {
     this._scanResultCallback = callback;
   }
